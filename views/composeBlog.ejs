@@ -1,0 +1,41 @@
+
+
+<%- include("./partials/header.ejs");%>
+ <main id="main">
+  <section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>Compose Blog</h2>
+      </div>
+          <div >
+
+            <form action="/composeBlog" method="post" role="form" class="php-email-form">
+              <div class="form-row">
+                <div class="col-md-8 form-group">
+                  <input type="text" name="title" class="form-control" id="title" placeholder="Title" data-rule="required" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-4 form-group">
+                  <input type="text" name="category" class="form-control" id="category" placeholder="Category" data-rule="required" data-msg="Please enter at least 4 chars" />
+                  <div class="validate"></div>
+                </div>
+              </div>
+ 
+              <div class="form-group">
+                <textarea class="form-control" name="content" rows="15" data-rule="required" data-msg="Please write something for us" placeholder="Content"></textarea>
+                <div class="validate"></div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your blog has been saved. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Submit Blog</button></div>
+            </form>
+
+          </div>
+          </div></section>
+
+</main>
+
+<%- include("./partials/footer.ejs");%>
